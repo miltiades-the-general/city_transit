@@ -5,6 +5,8 @@
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
+  background-color: var(--background-main);
+  color: var(--text-main);
 }
 
 .description {
@@ -18,11 +20,16 @@
   font-family: var(--font-mono);
 }
 
+.description h1 {
+  font-size: var(--text-header-font);
+}
+
 .description a {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0.5rem;
+  font-size: var(--text-secondary-font);
 }
 
 .description p {
@@ -77,22 +84,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 4rem 0;
-}
-
-.center::before {
-  background: var(--secondary-glow);
-  border-radius: 50%;
-  width: 480px;
-  height: 360px;
-  margin-left: -400px;
-}
-
-.center::after {
-  background: var(--primary-glow);
-  width: 240px;
-  height: 180px;
-  z-index: -1;
+  padding: 1rem 0;
 }
 
 .center::before,
@@ -149,6 +141,34 @@
     rgba(var(--tile-end-rgb), 1)
   );
   background-clip: content-box;
+}
+
+.appbar {
+  width: 900px;
+}
+
+.footerContainer {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 200px;
+  color: white;
+  background-color: var(--background-secondary);
+}
+
+.searchResults {
+  position: absolute;
+  right: 0;
+  z-index: 10;
+  margin-top: 1rem;
+}
+
+.searchResult {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 0.5rem;
+  height: 60px;
 }
 
 /* Enable hover only on non-touch devices */
